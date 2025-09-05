@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-// Author: TrungQuanDev | https://youtube.com/@trungquandev
+
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
@@ -20,7 +20,6 @@ const START_SERVER = () => {
   // Use Cookie
   app.use(cookieParser())
 
-  // Học cấu hình Cors chuẩn thực tế ở đây: https://youtu.be/iYgAWJ2Djkw
   app.use(cors(corsOptions))
 
   // Enable req.body json data
