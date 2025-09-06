@@ -3,9 +3,11 @@ import Dashboard from './pages/Dashboard'
 import LoginButton from './components/LoginButton'
 import LogoutButton from './components/LogoutButton'
 import { useAuth0 } from '@auth0/auth0-react'
+import { injectFn } from './utils/customAxios.js';
 
 function App() {
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated, getAccessTokenSilently } = useAuth0()
+  injectFn(getAccessTokenSilently)
 
   return (
     <div className="app-container">
